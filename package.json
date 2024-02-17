@@ -1,6 +1,6 @@
 {
   "name": "react-structure-generator",
-  "version": "1.0.1",
+  "version": "1.0.8",
   "description": "This npm package is used to facilitate the creation of configurations for React applications. It utilizes ready-made templates to create pages, components, Redux stores, and other structures, organizing them according to the specified names.",
   "main": "index.js",
   "scripts": {
@@ -10,10 +10,11 @@
     "link": "npm run build && npm link"
   },
   "bin": {
-    "react-structure-generator": "./dist/index.js"
+    "react-structure-generator": "./dist/index.js",
+    "rsg": "./dist/index.js"
   },
   "author": "BurakKontas",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.11.19",
     "typescript": "^5.3.3"

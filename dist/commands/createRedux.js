@@ -30,6 +30,10 @@ function createRedux(storeName) {
                 .replace(/Counter/g, capitalizedStoreName);
             fs.writeFileSync(newFilePath, content, 'utf-8');
         });
+        const gitFolderPath = path.join(destReduxDir, '.git');
+        if (fs.existsSync(gitFolderPath)) {
+            fs.rmSync(gitFolderPath, { recursive: true });
+        }
         console.log(`${capitalizedStoreName} store created successfully in ${destReduxDir}.`);
     }
     catch (error) {

@@ -40,6 +40,11 @@ function createHook(hookName: string) {
             fs.writeFileSync(newFilePath, content, 'utf-8');
         });
 
+        const gitFolderPath = path.join(destHooksDir, '.git');
+        if (fs.existsSync(gitFolderPath)) {
+            fs.rmSync(gitFolderPath, { recursive: true });
+        }
+
         console.log(`${hookName} hook created successfully in ${destHooksDir}.`);
     } catch (error) {
         console.error('Error occurred while creating React app structure:', error);

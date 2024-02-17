@@ -5,7 +5,7 @@ const path = require("path");
 const child_process_1 = require("child_process");
 function createService(serviceName) {
     const capitalizedStoreName = serviceName.charAt(0).toUpperCase() + serviceName.slice(1);
-    const destServiceDir = path.join('./src/redux', capitalizedStoreName);
+    const destServiceDir = path.join('./src/service', capitalizedStoreName);
     const githubRepoURL = 'https://github.com/BurakKontas/React-Structure-Service';
     // Belirtilen klasörün varlığını kontrol et
     if (fs.existsSync(destServiceDir)) {
@@ -30,6 +30,10 @@ function createService(serviceName) {
                 .replace(/Counter/g, capitalizedStoreName);
             fs.writeFileSync(newFilePath, content, 'utf-8');
         });
+        const gitFolderPath = path.join(destServiceDir, '.git');
+        if (fs.existsSync(gitFolderPath)) {
+            fs.rmSync(gitFolderPath, { recursive: true });
+        }
         console.log(`${capitalizedStoreName} service created successfully in ${destServiceDir}.`);
     }
     catch (error) {

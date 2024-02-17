@@ -30,6 +30,10 @@ function createComponent(componentName) {
                 .replace(/CustomButton/g, capitalizedComponentName);
             fs.writeFileSync(newFilePath, content, 'utf-8');
         });
+        const gitFolderPath = path.join(destComponentsDir, '.git');
+        if (fs.existsSync(gitFolderPath)) {
+            fs.rmSync(gitFolderPath, { recursive: true });
+        }
         console.log(`${capitalizedComponentName} component created successfully in ${destComponentsDir}.`);
     }
     catch (error) {

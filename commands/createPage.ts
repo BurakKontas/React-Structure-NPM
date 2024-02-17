@@ -35,6 +35,11 @@ function createPage(pageName: string) {
             fs.writeFileSync(newFilePath, content, 'utf-8');
         });
 
+        const gitFolderPath = path.join(destPagesDir, '.git');
+        if (fs.existsSync(gitFolderPath)) {
+            fs.rmSync(gitFolderPath, { recursive: true });
+        }
+
         console.log(`${capitalizedPageName} page created successfully in ${destPagesDir}.`);
     } catch (error) {
         console.error('Error occurred while creating React app structure:', error);

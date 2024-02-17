@@ -32,6 +32,10 @@ function createHook(hookName) {
             content = content.replace(/Counter/g, hookName.split("use")[1].charAt(0).toUpperCase() + hookName.split("use")[1].slice(1));
             fs.writeFileSync(newFilePath, content, 'utf-8');
         });
+        const gitFolderPath = path.join(destHooksDir, '.git');
+        if (fs.existsSync(gitFolderPath)) {
+            fs.rmSync(gitFolderPath, { recursive: true });
+        }
         console.log(`${hookName} hook created successfully in ${destHooksDir}.`);
     }
     catch (error) {

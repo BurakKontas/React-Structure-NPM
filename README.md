@@ -46,6 +46,12 @@ or
 npx react-structure-generator store test 
 ```
 
+## Shortcut
+You can use shortcut to use react-structure-generator
+```bash
+npx rsg <command>
+```
+
 ## File Structure
 ```plaintext
  📂 component (https://github.com/BurakKontas/React-Structure-Component)
