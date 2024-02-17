@@ -1,8 +1,8 @@
 {
-  "name": "create-react-structure-app",
-  "version": "1.0.0",
-  "description": "Creates react structure app ",
-  "main": "index.ts",
+  "name": "react-structure-generator",
+  "version": "1.0.1",
+  "description": "This npm package is used to facilitate the creation of configurations for React applications. It utilizes ready-made templates to create pages, components, Redux stores, and other structures, organizing them according to the specified names.",
+  "main": "index.js",
   "scripts": {
     "start": "ts-node index.ts",
     "build": "tsc",
@@ -17,5 +17,8 @@
   "devDependencies": {
     "@types/node": "^20.11.19",
     "typescript": "^5.3.3"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }

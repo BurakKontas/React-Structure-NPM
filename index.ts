@@ -26,7 +26,10 @@ const commands: Command = {
 const [command, appName] = process.argv.slice(2);
 
 if (!command || !appName) {
-    console.error('Usage: react-structure <command>');
+    const availableCommands = Object.keys(commands).join(', ');
+    console.error('Usage: react-structure-generator <command>');
+    console.error('Available commands: ', availableCommands);
+
     process.exit(1);
 }
 

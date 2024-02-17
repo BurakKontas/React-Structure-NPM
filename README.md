@@ -46,6 +46,34 @@ or
 npx react-structure-generator store test 
 ```
 
+## File Structure
+```plaintext
+ 📂 component (https://github.com/BurakKontas/React-Structure-Component)
+ ┣ 📜 custombutton.module.scss
+ ┣ 📜 custombutton.tsx
+ ┣ 📜 custombutton.types.ts
+ ┗ 📜 index.ts
+ 📂 hook (https://github.com/BurakKontas/React-Structure-Hook)
+ ┣ 📜 index.ts
+ ┣ 📜 useCounter.tsx
+ ┗ 📜 useCounter.types.ts
+ 📂 page (https://github.com/BurakKontas/React-Structure-Page)
+ ┣ 📜 Homepage.module.scss
+ ┣ 📜 Homepage.tsx
+ ┗ 📜 index.ts
+ 📂 redux (https://github.com/BurakKontas/React-Structure-Redux)
+ ┣ 📜 counter.async_thunks.ts
+ ┣ 📜 counter.extra_reducers.ts
+ ┣ 📜 counter.reducers.ts
+ ┣ 📜 counter.selectors.ts
+ ┣ 📜 counter.slice.ts
+ ┣ 📜 counter.types.ts
+ ┗ 📜 index.ts
+ 📂 service (https://github.com/BurakKontas/React-Structure-Service)
+ ┣ 📜 counterService.ts
+ ┣ 📜 counterService.types.ts
+ ┗ 📜 index.ts
+```
 ## License
 
 This project is licensed under the MIT License.
