@@ -10,7 +10,7 @@
     "link": "npm run build && npm link"
   },
   "bin": {
-    "react-structure": "./dist/index.js"
+    "react-structure-generator": "./dist/index.js"
   },
   "author": "BurakKontas",
   "license": "ISC",
