@@ -1,0 +1,21 @@
+{
+  "name": "create-react-structure-app",
+  "version": "1.0.0",
+  "description": "Creates react structure app ",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "link": "npm run build && npm link"
+  },
+  "bin": {
+    "react-structure": "./dist/index.js"
+  },
+  "author": "BurakKontas",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "typescript": "^5.3.3"
+  }
+}
