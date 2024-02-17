@@ -12,6 +12,9 @@ function createReactApp(appName) {
         if (fs.existsSync(gitFolderPath)) {
             fs.rmSync(gitFolderPath, { recursive: true });
         }
+        console.log('Installing dependencies with npm...');
+        (0, child_process_1.execSync)(`npm install`, { cwd: appName });
+        console.log('Dependencies installed successfully!');
     }
     catch (error) {
         console.error('Error occurred while creating React app structure:', error);
