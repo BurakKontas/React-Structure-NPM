@@ -4,7 +4,7 @@ import { execSync } from 'child_process';
 
 function createRedux(storeName: string) {
     const capitalizedStoreName = storeName.charAt(0).toUpperCase() + storeName.slice(1);
-    const destReduxDir = path.join('./src/service', capitalizedStoreName);
+    const destReduxDir = path.join('./src/redux', capitalizedStoreName);
     const githubRepoURL = 'https://github.com/BurakKontas/React-Structure-Redux';
 
     // Belirtilen klasörün varlığını kontrol et
